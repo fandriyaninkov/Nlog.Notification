@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TelegramNotification\Images\1.jpg" />
+    <None Remove="TelegramNotification\Images\2.jpg" />
+    <None Remove="TelegramNotification\Images\3.jpg" />
+    <None Remove="TelegramNotification\Images\4.jpg" />
+    <None Remove="TelegramNotification\Images\5.jpg" />
+    <None Remove="TelegramNotification\Images\6.jpg" />
+    <None Remove="TelegramNotification\Images\7.png" />
+    <None Remove="TelegramNotification\Images\8.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="TelegramNotification\Images\1.jpg" />
+    <EmbeddedResource Include="TelegramNotification\Images\2.jpg" />
+    <EmbeddedResource Include="TelegramNotification\Images\3.jpg" />
+    <EmbeddedResource Include="TelegramNotification\Images\4.jpg" />
+    <EmbeddedResource Include="TelegramNotification\Images\5.jpg" />
+    <EmbeddedResource Include="TelegramNotification\Images\6.jpg" />
+    <EmbeddedResource Include="TelegramNotification\Images\7.png" />
+    <EmbeddedResource Include="TelegramNotification\Images\8.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.5.0-rc06" />
+    <PackageReference Include="Telegram.Bot" Version="14.0.0-rc-367" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
