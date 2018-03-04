@@ -6,7 +6,8 @@
     <Company />
     <Product />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.5.1</Version>
+    <Version>0.5.2-beta</Version>
+    <PackageProjectUrl>https://github.com/schlawiner92/Nlog.Notification</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

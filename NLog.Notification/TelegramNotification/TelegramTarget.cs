@@ -41,7 +41,7 @@
             return new ErrorMessage
             {
                 Message = Layout.Render(logEvent),
-                StackTrace = logEvent.Exception.StackTrace
+                StackTrace = logEvent.Exception?.StackTrace
             };
         }
 

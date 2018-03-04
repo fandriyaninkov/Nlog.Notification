@@ -14,7 +14,6 @@ namespace NLog.Notification.Demo
         static void Main(string[] args)
         {
             Target.Register<TelegramTarget>("TelegramNotification");
-            // var telega = new TelegramTarget();
             var servicesProvider = BuildDi();
             var runner = servicesProvider.GetRequiredService<Runner>();
 

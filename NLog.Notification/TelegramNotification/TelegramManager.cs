@@ -27,7 +27,10 @@
         public void SendErrorInfo(ErrorMessage errorMessage)
         {
             var message = _botClient.SendTextMessageAsync(_chatId, errorMessage.Message).Result;
-            var result = _botClient.SendTextMessageAsync(_chatId, errorMessage.StackTrace).Result;
+            if (errorMessage.StackTrace != null)
+            {
+                var result = _botClient.SendTextMessageAsync(_chatId, errorMessage.StackTrace).Result;
+            }   
             SendFileImage();
         }
 
