@@ -23,3 +23,7 @@
 ``` c#
 Target.Register<TelegramTarget>("TelegramNotification");
 ```
+
+# Example of notification
+
+![alt text](https://github.com/schlawiner92/Nlog.Notification/blob/master/readme_result.png)
