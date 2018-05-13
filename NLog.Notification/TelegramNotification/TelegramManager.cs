@@ -4,6 +4,7 @@
     using NLog.Notification.Properties;
     using System;
     using System.IO;
+    using System.Net.Http;
     using Telegram.Bot;
     using Telegram.Bot.Types.InputFiles;
 
@@ -11,12 +12,18 @@
     {
         private readonly string _chatId;
         private readonly ITelegramBotClient _botClient;
-        private static Random _random = new Random(); 
+        private static Random _random = new Random();
 
         public TelegramManager(string token, string chatId)
         {
             _chatId = chatId;
             _botClient = new TelegramBotClient(token);
+        }
+
+        public TelegramManager(string token, string chatId, HttpClient httpClient)
+        {
+            _chatId = chatId;
+            _botClient = new TelegramBotClient(token, httpClient);
         }
 
         public async void SendLogInfoAsync(LogMessage logMessage)
